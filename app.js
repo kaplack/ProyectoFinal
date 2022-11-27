@@ -24,6 +24,7 @@ app.use("/login", loginRouter);
 app.use("/signup", signUpRouter);
 app.use("/logout", logOutRouter);
 
-app.listen(8080, () => {
+let PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
   logger.info("app is running");
 });
